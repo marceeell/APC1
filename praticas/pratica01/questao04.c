@@ -13,17 +13,20 @@ int main() {
 
   preco_inicial = 100.0f;
 
+  printf("Entre com o preco inicial: ");
+  int deu_certo = scanf("%f", &preco_final);
+
   float valor_imposto_icms = ICMS * preco_inicial;
   float valor_imposto_cofins = COFINS * preco_inicial;
   float valor_imposto_pis_pasep = PIS_PASEP * preco_inicial;
 
   preco_final = (1 + ICMS + COFINS + PIS_PASEP) * preco_inicial;
 
-  printf("Preco inicial era %f\n", preco_inicial);
+  printf("Preco incial é %f\n", preco_inicial);
   printf("Imposto ICMS é %f\n", valor_imposto_icms);
   printf("Imposto COFINS é %f\n", valor_imposto_cofins);
-  printf("Imposto PI_PASEP é %f\n", valor_imposto_pis_pasep);
-  printf("Preco final final é %f\n", preco_final);
+  printf("Imposto PIS_PASEP é %f\n", valor_imposto_pis_pasep);
+  printf("Preco final é %f\n", preco_final);
 
   return 0;
 }
